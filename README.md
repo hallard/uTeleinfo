@@ -163,13 +163,13 @@ https://github.com/hallard/python-teleinfo
 
 **Schémas** 
 
-![Schematics](https://raw.github.com/hallard/teleinfo/main/uTeleinfo/pictures/MicroTeleinfo-sch.png)
+![Schematics](https://github.com/hallard/teleinfo/raw/main/uTeleinfo/pictures/MicroTeleinfo-sch.png)
 
 **Cartes**  
 
-![PCB](https://raw.github.com/hallard/teleinfo/main/uTeleinfo/pictures/MicroTeleinfo-pcb.png)
+![PCB](https://github.com/hallard/teleinfo/raw/main/uTeleinfo/pictures/MicroTeleinfo-pcb.png)
 
-![On PI](https://raw.github.com/hallard/teleinfo/main/uTeleinfo/pictures/MicroTeleinfo-plugged.png)
+![On PI](https://github.com/hallard/teleinfo/raw/main/uTeleinfo/pictures/MicroTeleinfo-plugged.png)
 
 
 # Support et discussions
