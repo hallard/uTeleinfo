@@ -182,7 +182,7 @@ ti = Parser(UTInfo3())
 client = mqtt.Client("PI-Demo1")
 client.connect("test.mosquitto.org")
 while True:
-    data =  json.dumps(ti.get_frame())
+    data = json.dumps(ti.get_frame())
     print(data)
     client.publish("teleinfo/demo", data)
 ```
@@ -202,6 +202,8 @@ pi@pi03:~ # mosquitto_sub -h test.mosquitto.org -t "teleinfo/#"
 {"IINST": "001", "MOTDETAT": "000000", "OPTARIF": "HC..", "ADCO": "021528603314", "HCHC": "001096011", "PAPP": "00160", "IMAX": "002", "PTEC": "HP..", "ISOUSC": "15", "HHPHC": "A", "HCHP": "002785291"}
 {"IINST": "001", "MOTDETAT": "000000", "OPTARIF": "HC..", "ADCO": "021528603314", "HCHC": "001096011", "PAPP": "00180", "IMAX": "002", "PTEC": "HP..", "ISOUSC": "15", "HHPHC": "A", "HCHP": "002785291"}
 ```
+
+Bien entendu c'est un exemple, il faudrait parser les valeurs, potentiellement les convertir en nombre et faire un peu de gestion d'erreur mais les bases fonctionnelles sont là.
 
 # Conception
 
