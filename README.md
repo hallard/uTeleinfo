@@ -29,7 +29,7 @@ Suivez mes nouveautés et autres projets sur mon [blog][4]
 
 **V3.0 VS V2.0**
 
-![V3 vs V2](https://raw.github.com/hallard/teleinfo/main/uTeleinfo/pictures/MicroTeleinfo-3vs2.png)
+![V3 vs V2](https://github.com/hallard/uTeleinfo/raw/main/pictures/MicroTeleinfo-3vs2.png)
 
 
 # Installation et configuration
@@ -145,7 +145,7 @@ PS : Pour quitter picocom il faut faire `CTRL-A` puis immédiatement `CRTL-Q`
 
 De plus lorsque picocom est actif et les données reçues par le PI la LED rouge doit aussi se mettre à clignoter 
 
-![Schematics](https://raw.github.com/hallard/teleinfo/main/uTeleinfo/pictures/MicroTeleinfo-blink.gif)
+![Schematics](https://raw.github.com/hallard/uTeleinfo/raw/main/pictures/MicroTeleinfo-blink.gif)
 
 
 ### Test avec Python
@@ -163,13 +163,13 @@ https://github.com/hallard/python-teleinfo
 
 **Schémas** 
 
-![Schematics](https://github.com/hallard/teleinfo/raw/main/uTeleinfo/pictures/MicroTeleinfo-sch.png)
+![Schematics](https://github.com/hallard/uTeleinfo/raw/main/pictures/MicroTeleinfo-sch.png)
 
 **Cartes**  
 
-![PCB](https://github.com/hallard/teleinfo/raw/main/uTeleinfo/pictures/MicroTeleinfo-pcb.png)
+![PCB](https://github.com/hallard/uTeleinfo/raw/main/pictures/MicroTeleinfo-pcb.png)
 
-![On PI](https://github.com/hallard/teleinfo/raw/main/uTeleinfo/pictures/MicroTeleinfo-plugged.png)
+![On PI](https://github.com/uTeleinfo/raw/main/pictures/MicroTeleinfo-plugged.png)
 
 
 # Support et discussions
