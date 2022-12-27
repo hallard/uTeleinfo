@@ -145,7 +145,7 @@ PS : Pour quitter picocom il faut faire `CTRL-A` puis immédiatement `CRTL-Q`
 
 De plus lorsque picocom est actif et les données reçues par le PI la LED rouge doit aussi se mettre à clignoter 
 
-![Schematics](https://raw.github.com/hallard/uTeleinfo/raw/main/pictures/MicroTeleinfo-blink.gif)
+![Schematics](https://github.com/hallard/uTeleinfo/raw/main/pictures/MicroTeleinfo-blink.gif)
 
 
 ### Test avec Python
