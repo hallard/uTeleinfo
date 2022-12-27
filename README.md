@@ -169,7 +169,7 @@ https://github.com/hallard/python-teleinfo
 
 ![PCB](https://github.com/hallard/uTeleinfo/raw/main/pictures/MicroTeleinfo-pcb.png)
 
-![On PI](https://github.com/uTeleinfo/raw/main/pictures/MicroTeleinfo-plugged.png)
+![On PI](https://github.com/hallard/uTeleinfo/raw/main/pictures/MicroTeleinfo-plugged.png)
 
 
 # Support et discussions
