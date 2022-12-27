@@ -1,0 +1,18 @@
+*.lck
+*.s#?
+*.b#?
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+
+*.xls
+*.csv
+*.docx
+*.zip
+
+
+
+
