@@ -76,12 +76,12 @@ sudo apt-get install picocom
 
 Puis lancer la commande suivante si vous êtes en mode historique
 ```shell
-root@pi03:~ # picocom -b 1200 -d 7 -p e -f n /dev/ttyACM0 
+pi@pi03:~ # picocom -b 1200 -d 7 -p e -f n /dev/ttyACM0 
 ```
 
 Ou celle ci en mode standard
 ```shell
-root@pi03:~ # picocom -b 9600 -d 7 -p e -f n /dev/ttyACM0 
+pi@pi03:~ # picocom -b 9600 -d 7 -p e -f n /dev/ttyACM0 
 ```
 
 Vous devriez voir arriver des données sur le termimal 
@@ -159,6 +159,51 @@ Un programme plus avancé été réalisé en python (merci à l'auteur original)
 https://github.com/hallard/python-teleinfo
 
 
+### Python publication MQTT
+
+En utilisant le module avancé ci dessous il est extrèmement simple de faire un script python qui publie les données dans MQTT
+
+Installation de la librairie paho-mqtt et des outils MQTT
+
+```shell
+pi@pi03:~ # sudo apt-get install mosquitto-clients
+pi@pi03:~ # pip install paho-mqtt
+```
+
+Créer le script suivant dans le dossier python-teleinfo, par exemple `test.py`
+
+```
+#!/usr/bin/env python
+import json
+import paho.mqtt.client as mqtt
+from teleinfo import Parser
+from teleinfo.hw_vendors import UTInfo3
+ti = Parser(UTInfo3())
+client = mqtt.Client("PI-Demo1")
+client.connect("test.mosquitto.org")
+while True:
+    data =  json.dumps(ti.get_frame())
+    print(data)
+    client.publish("teleinfo/demo", data)
+```
+
+Puis le lancer via
+```
+pi@pi03:~/python-teleinfo $ python test.py 
+```
+Enfin ouvrez un autre shell sue le PI (ou lancer la commande sur votre ordinateur ou utiliser un outil type MQTT Explorer) et vérifier les publication dans MQTT
+
+Et voila le résultat
+
+```
+
+pi@pi03:~ # mosquitto_sub -h test.mosquitto.org -t "teleinfo/#"
+{"IINST": "001", "MOTDETAT": "000000", "OPTARIF": "HC..", "ADCO": "021528603314", "HCHC": "001096011", "PAPP": "00170", "IMAX": "002", "PTEC": "HP..", "ISOUSC": "15", "HHPHC": "A", "HCHP": "002785290"}
+{"IINST": "001", "MOTDETAT": "000000", "OPTARIF": "HC..", "ADCO": "021528603314", "HCHC": "001096011", "PAPP": "00160", "IMAX": "002", "PTEC": "HP..", "ISOUSC": "15", "HHPHC": "A", "HCHP": "002785291"}
+{"IINST": "001", "MOTDETAT": "000000", "OPTARIF": "HC..", "ADCO": "021528603314", "HCHC": "001096011", "PAPP": "00180", "IMAX": "002", "PTEC": "HP..", "ISOUSC": "15", "HHPHC": "A", "HCHP": "002785291"}
+```
+
+
 # Conception
 
 **Schémas** 
@@ -183,7 +228,7 @@ Si vous rencontrez le moindre soucis ou si vous voulez simplement discuter de vo
 This work is licensed under a [Creative Commons Attribution-NonCommercial 4.0 International License](http://creativecommons.org/licenses/by-nc/4.0/)    
 If you want to do commercial stuff with this project, please contact [CH2i company](https://ch2i.eu/en#support) so we can organize an simple agreement.
 
-# Trop compliquer de le fabriquer soit même ? 
+# Trop compliqué de le fabriquer ? 
 
 Vous pouvez commander ce module assemblé et prêt à l'emploi sur [tindie][1]
 
