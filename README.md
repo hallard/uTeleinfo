@@ -172,7 +172,7 @@ pi@pi03:~ # pip install paho-mqtt
 
 Créer le script suivant dans le dossier python-teleinfo, par exemple `test.py`
 
-```
+```python
 #!/usr/bin/env python
 import json
 import paho.mqtt.client as mqtt
@@ -188,21 +188,20 @@ while True:
 ```
 
 Puis le lancer via
-```
+```shell
 pi@pi03:~/python-teleinfo $ python test.py 
 ```
 Enfin ouvrez un autre shell sue le PI (ou lancer la commande sur votre ordinateur ou utiliser un outil type MQTT Explorer) et vérifier les publication dans MQTT
 
 Et voila le résultat
 
-```
+```shell
 
 pi@pi03:~ # mosquitto_sub -h test.mosquitto.org -t "teleinfo/#"
 {"IINST": "001", "MOTDETAT": "000000", "OPTARIF": "HC..", "ADCO": "021528603314", "HCHC": "001096011", "PAPP": "00170", "IMAX": "002", "PTEC": "HP..", "ISOUSC": "15", "HHPHC": "A", "HCHP": "002785290"}
 {"IINST": "001", "MOTDETAT": "000000", "OPTARIF": "HC..", "ADCO": "021528603314", "HCHC": "001096011", "PAPP": "00160", "IMAX": "002", "PTEC": "HP..", "ISOUSC": "15", "HHPHC": "A", "HCHP": "002785291"}
 {"IINST": "001", "MOTDETAT": "000000", "OPTARIF": "HC..", "ADCO": "021528603314", "HCHC": "001096011", "PAPP": "00180", "IMAX": "002", "PTEC": "HP..", "ISOUSC": "15", "HHPHC": "A", "HCHP": "002785291"}
 ```
-
 
 # Conception
 
