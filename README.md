@@ -231,8 +231,12 @@ If you want to do commercial stuff with this project, please contact [CH2i compa
 
 # Trop compliqué de le fabriquer ? 
 
-Vous pouvez commander ce module assemblé et prêt à l'emploi sur [tindie][1]
+Vous pouvez commander ce module assemblé et prêt à l'emploi sur [tindie][1] ou sur [Lectronz](https://lectronz.com/products/utinfo).
 
+Les clients européens peuvent préférer commander sur Lectronz, qui propose des moyens de paiement supplémentaires et des prix en euros.
+
+<a href="https://lectronz.com/stores/hallard" alt="I sell on Lectronz"><img src="https://lectronz-images.b-cdn.net/static/badges/i-sell-on-lectronz-medium.png" /></a>
+<a href="https://lectronz.com/products/utinfo" alt="Buy it on Lectronz"><img src="https://lectronz-images.b-cdn.net/static/badges/buy-it-on-lectronz-medium.png" /></a>
 <a href="https://www.tindie.com/products/25467/"><img src="https://d2ss6ovg47m0r5.cloudfront.net/badges/tindie-mediums.png" alt="I sell on Tindie" width="150" height="78"></a>
 
 
